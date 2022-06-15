@@ -1,4 +1,4 @@
-import GoogleLogin from '@/components/auth/GoogleLogin'
+import GoogleLogin from '@/components/users/GoogleLogin'
 import React from 'react'
 
 const GoogleLoginPage = () => {

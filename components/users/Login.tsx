@@ -40,12 +40,12 @@ export default function Login() {
             </Button>
             </div>
             <div>
-            <Link href='/auth/register' >
+            <Link href='/users/register' >
                 <h5 style={{ marginTop: "0.5rem",textAlign:"end",color:"#5e5ee6",cursor:"pointer" }}>
 						회원가입
             </h5>
             </Link>
-            <Link href="/auth/googleLogin">
+            <Link href="/users/googleLogin">
                 <Button 
                   fullWidth
                   variant="contained"

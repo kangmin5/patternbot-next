@@ -2,12 +2,15 @@ import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
 import reducer from '@/modules/counter/counterSlice'
 import { createWrapper } from 'next-redux-wrapper'
 import logger from 'redux-logger'
+import faqsReducer from './faqs/faqsSlice'
 
 const isDev = process.env.NODE_ENV === 'development'
 
 const makestore = () =>
     configureStore({
-        reducer,
+        reducer: {
+            faqs : faqsReducer,
+        },
         middleware: getDefaultMiddleware =>
             isDev ? getDefaultMiddleware().concat(logger) : getDefaultMiddleware(),
         devTools: isDev

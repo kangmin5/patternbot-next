@@ -15,8 +15,8 @@ export default function Register() {
               fullWidth
               id=""
               label="이름"
-              name="username"
-              autoComplete="username"
+              name="name"
+              autoComplete="name"
             />
             <TextField
               margin="normal"
@@ -24,8 +24,8 @@ export default function Register() {
               fullWidth
               id=""
               label="아이디"
-              name="userid"
-              autoComplete="userid"
+              name="username"
+              autoComplete="username"
             />
             <TextField
               margin="normal"
@@ -46,25 +46,8 @@ export default function Register() {
               name="email"
               autoComplete="email"
             />  
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              name="birth"
-              label="생년월일"
-              id="birth"
-              autoComplete="birth"
-            />          
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              name="address"
-              label="주소"              
-              id="address"
-              autoComplete="address"
-            />
-            </div>
+          </div>
+        
             <div>
             <Button
               type="submit"
@@ -76,7 +59,7 @@ export default function Register() {
             </Button>
             </div>
             <div>
-            <Link href='/auth/login' >
+            <Link href='/users/login' >
                 <h5 style={{ marginTop: "0.5rem",textAlign:"end",color:"#5e5ee6",cursor:"pointer" }}>
 						로그인
             </h5>

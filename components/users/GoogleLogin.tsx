@@ -20,8 +20,8 @@ export default function GoogleLogin() {
                     fullWidth
                     id=""
                     label="Google이메일"
-                    name="userid"
-                    autoComplete="userid"/>
+                    name="email"
+                    autoComplete="email"/>
                 <TextField
                     margin="normal"
                     required
