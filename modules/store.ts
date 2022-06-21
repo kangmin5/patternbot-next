@@ -6,9 +6,8 @@ import orderReducer from './orders'
 import settingReducer from './settings'
 import usersReducer, { UserState } from '../modules/users'
 import faqsReducer from './faqs'
-import createSagaMiddleware from 'redux-saga'
-
-
+import rootSaga from '@/sagas';
+import createSagaMiddleware from '@redux-saga/core'
 const sagaMiddleware = createSagaMiddleware()
 const isDev = process.env.NODE_ENV === 'development'
 
@@ -31,16 +30,16 @@ const rootReducer = (
     })(state,action)
 }
 
-const makestore = () =>
-    configureStore({
-        reducer: {
-            users: usersReducer,
-        },
+const makestore = () => {
+    const store = configureStore({
+        reducer: { rootReducer },
         middleware: getDefaultMiddleware =>
             isDev ? getDefaultMiddleware().concat(logger, sagaMiddleware) : getDefaultMiddleware(),
         devTools: isDev
     });
-
+    sagaMiddleware.run(rootSaga)
+    return store
+}
 export const wrapper = createWrapper(makestore, {
     debug: isDev
 }) ;

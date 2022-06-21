@@ -16,7 +16,8 @@ export const userSlice = createSlice({
     name: 'users',
     initialState,
     reducers: {
-        joinRequest(state: UserState, _payload){
+        joinRequest(state: UserState, _payload) {
+            alert(`진행 : 회원가입 데이터 ${state.data}`)
             state.status = 'loading';
             
         },

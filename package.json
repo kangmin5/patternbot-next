@@ -41,6 +41,7 @@
     "babel-loader": "8.1.0"
   },
   "devDependencies": {
+    "@redux-saga/is": "^1.1.2",
     "@types/jest": "^27.5.1",
     "@types/node": "17.0.41",
     "@types/react": "18.0.12",
