@@ -1,4 +1,4 @@
-import OrderReport from '@/components/menu/report/OrderTable'
+import OrderReport from '@/components/orders/OrderTable'
 import React from 'react'
 
 const OrderReportPage = () => {

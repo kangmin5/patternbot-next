@@ -1,11 +1,10 @@
 import React from 'react'
-import styles from '@/styles/InvestReport.module.css'
-import OrderTable from './OrderTable'
+import styles from '@/styles/OrderTable.module.css'
 
-export const InvestTable=()=>{
+export const OrderTable=()=>{
   return (
     <div className={styles.table}>
-      <h3>AI 진행중</h3>
+      <h3>미체결주문</h3>
       <ul className={styles.thul}>
         <li>매수일</li>
         <li>종목</li>
@@ -56,25 +55,6 @@ export const InvestTable=()=>{
   )
 }
 
+export default OrderTable
 
-const InvestReport = () => {
-  return (
-    <div className={styles.container}>
-      <h1>자동매매</h1>
-      <div>
-        <p style={{fontSize:"0.5rem",textAlign:"end"}}>[단위: 원]</p>
-        <InvestTable />
-      </div>
-      <div>
-        <button className={styles.button1}>주문현황</button>
-        <button className={styles.button1}>수익현황</button>
-      </div>
-      <div>
-        <p style={{fontSize:"0.5rem",textAlign:"end"}}>[단위: 원]</p>
-        <OrderTable/>
-      </div>
-    </div>
-  )
-}
 
-export default InvestReport
