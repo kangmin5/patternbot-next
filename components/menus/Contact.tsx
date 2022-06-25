@@ -5,7 +5,7 @@ import styles from '@/styles/Contact.module.css'
  const Contact=()=> {
   return (
     <div className={styles.container}>
-      Contact
+      <h1>Contact</h1>
     </div>
   )
 }

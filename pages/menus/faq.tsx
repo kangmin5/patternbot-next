@@ -1,5 +1,6 @@
+import Faq from '@/components/menus/Faq'
 import React from 'react'
-import Faq from '@/components/menu/Faq'
+
 
 const FaqPage=()=> {
   return (

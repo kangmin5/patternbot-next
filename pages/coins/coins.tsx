@@ -1,3 +1,4 @@
+
 import Coins from '@/components/coins/Coins'
 import React from 'react'
 

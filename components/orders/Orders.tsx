@@ -1,14 +1,14 @@
 import React from 'react'
-import styles from '@/styles/Order.module.css'
-import OrderTable from './OrderTable'
+import styles from '@/styles/Orders.module.css'
+import OrdersTable from './OrdersTable'
 
-const Order = () => {
+const Orders = () => {
   return (
     <div className={styles.container}>
       <h1>자동매매</h1>
       <div>
         <p style={{fontSize:"0.5rem",textAlign:"end"}}>[단위: 원]</p>
-        <OrderTable />
+        <OrdersTable />
       </div>
       <div>
         <button className={styles.button1}>주문현황</button>
@@ -16,10 +16,10 @@ const Order = () => {
       </div>
       <div>
         <p style={{fontSize:"0.5rem",textAlign:"end"}}>[단위: 원]</p>
-        <OrderTable/>
+        <OrdersTable/>
       </div>
     </div>
   )
 }
 
-export default Order
+export default Orders

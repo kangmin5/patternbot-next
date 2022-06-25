@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from '@/styles/OrderTable.module.css'
+import styles from '@/styles/OrdersTable.module.css'
 
-export const OrderTable=()=>{
+export const OrdersTable=()=>{
   return (
     <div className={styles.table}>
       <h3>미체결주문</h3>
@@ -55,6 +55,6 @@ export const OrderTable=()=>{
   )
 }
 
-export default OrderTable
+export default OrdersTable
 
 
