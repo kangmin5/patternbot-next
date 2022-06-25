@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 .table{
     background-color: rgb(222, 219, 219);
@@ -48,7 +48,7 @@
     color: aliceblue;
 }
 .button1{
-    margin-top: 2rem;
+    margin-top: 1rem;
     background-color:orange;
     border:2px solid yellow;
     margin-right:3rem;

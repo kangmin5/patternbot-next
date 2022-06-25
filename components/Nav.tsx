@@ -11,8 +11,8 @@ import styles from '@/styles/Nav.module.css'
             <p className={styles.logo}>PatternBOT</p></Link>
           </div>
           <div className={styles.menus}>
-              <Link className={styles.menu} href='/coins/coins'>거래소</Link>
-              <Link className={styles.menu} href='/orders/orders'>투자현황</Link>
+              <Link className={styles.menu} href='/coins/coins'>현재가</Link>
+              <Link className={styles.menu} href='/orders/orders'>주문/손익</Link>
               <Link className={styles.menu} href='/settings/settings'>설정</Link>
               <Link className={styles.menu} href='/menus/about'>About</Link>
               <Link className={styles.menu} href='/menus/contact'>Contact</Link>

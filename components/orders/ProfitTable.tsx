@@ -1,10 +1,10 @@
 import React from 'react'
 import styles from '@/styles/OrdersTable.module.css'
 
-export const OrdersTable=()=>{
+export const ProfitTable=()=>{
   return (
     <div className={styles.table}>
-      <h3> 잔고/손익</h3>
+      <h3>수익분석</h3>
       <p style={{ fontSize: "0.5rem", textAlign: "end" }}>[단위: 원]</p>
       <ul className={styles.thul}>
         <li>매수일</li>
@@ -56,6 +56,6 @@ export const OrdersTable=()=>{
   )
 }
 
-export default OrdersTable
+export default ProfitTable
 
 
