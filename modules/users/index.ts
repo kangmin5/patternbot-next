@@ -8,8 +8,10 @@ export interface UserState {
     status: 'idle' | 'loading' | 'succeeded' |'failed'
 }
 const initialState: UserState = {
-    data: [],
-    status: 'idle',
+    data: [
+        { username: 'mk', password: '1111', email: 'mk@kangmin.kr', name: 'kangmin' }
+    ],
+    status: 'idle'
 }
 
 export const userSlice = createSlice({
@@ -17,7 +19,7 @@ export const userSlice = createSlice({
     initialState,
     reducers: {
         joinRequest(state: UserState, _payload) {
-            alert(`진행 : 회원가입 데이터 ${state.data}`)
+            alert(`진행 2 : 회원가입 데이터 ${state.data}`)
             state.status = 'loading';
             
         },
@@ -36,7 +38,7 @@ export const userSlice = createSlice({
         loginSuccess(state: UserState, {payload}){
             state.status = 'idle'
             state.data = [...state.data, payload]
-            alert(`진행 : 회원가입 데이터 ${state.data}`)
+            alert(`진행 2 : 회원가입 데이터 ${state.data}`)
         },
         loginFailure(state: UserState, {payload}){
             state.status = 'failed'

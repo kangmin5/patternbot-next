@@ -35,12 +35,12 @@ interface UserLoginSuccessType{
 }
 function* join(user: UserJoinType){
     try {
-        
-        console.log(' saga내부 join 성공  '+ JSON.stringify(user))
+        console.log('3 saga내부 join 성공  ' + JSON.stringify(user))
+        alert('3 saga내부 join 성공  '+ JSON.stringify(user))
         const response: UserJoinSuccessType = yield userJoinApi(user.payload)
         yield put(userActions.joinSuccess(response))
     }catch(error){
-         console.log(' saga내부 join 실패  ') 
+         console.log('3 saga내부 join 실패  ') 
          yield put(userActions.joinFailure(error))
     }
 }
@@ -54,6 +54,7 @@ function* login(login: UserLoginType){
          yield put(userActions.loginFailure(error))
     }
 }
+
 export function* watchJoin(){
     yield takeLatest(userActions.joinRequest, join)
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "/styles/trade.module.css"
 
-export default function Ttrade(){ 
+const Ttrade=()=>{ 
 return (
   <div className={styles.container}>
   <h1>거래소</h1>
@@ -52,3 +52,4 @@ return (
 </div>
 )
 }
+export default Ttrade;

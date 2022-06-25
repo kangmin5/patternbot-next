@@ -3,7 +3,7 @@ import styles from '@/styles/Home.module.css'
 import Image from 'next/image'
 
 
-export default function Home() {
+ const Home=()=> {
   return (
     <div className={styles.container}>
       <div className={styles.backimage}>
@@ -21,4 +21,4 @@ export default function Home() {
     </div>
   )
 }
- 
+export default Home;

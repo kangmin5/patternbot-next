@@ -8,6 +8,6 @@ import {
 export default function* rootSaga() {
   yield all([
     fork(watchJoin),
-    fork(watchLogin)
+    // fork(watchLogin)
   ]);
 }

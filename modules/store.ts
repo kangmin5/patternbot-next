@@ -1,13 +1,14 @@
-import { configureStore, ThunkAction, Action, AnyAction, combineReducers } from '@reduxjs/toolkit'
+import { configureStore, ThunkAction, Action, AnyAction, combineReducers, CombinedState } from '@reduxjs/toolkit'
+import createSagaMiddleware from '@redux-saga/core'
+import usersReducer, { UserState } from '../modules/users'
+import rootSaga from '@/sagas';
 import { createWrapper, HYDRATE } from 'next-redux-wrapper'
 import logger from 'redux-logger'
 import coinReducer from './coins'
 import orderReducer from './orders'
 import settingReducer from './settings'
-import usersReducer, { UserState } from '../modules/users'
 import faqsReducer from './faqs'
-import rootSaga from '@/sagas';
-import createSagaMiddleware from '@redux-saga/core'
+
 const sagaMiddleware = createSagaMiddleware()
 const isDev = process.env.NODE_ENV === 'development'
 
@@ -15,10 +16,10 @@ interface RootStates {
 	user: UserState
 }
 
-const rootReducer = (
+const rootReducer:any = (
 	state: RootStates,
     action: AnyAction
-) => {
+): CombinedState<RootState> => {
     if(action.type === HYDRATE) {
         return{
             ...state, ...action.payload

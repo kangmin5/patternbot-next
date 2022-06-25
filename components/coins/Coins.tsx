@@ -3,11 +3,11 @@
 import Link from "next/link";
 import React, {useState} from 'react';
 import axios from "axios";
-import styles from "/styles/Trade.module.css"
+import styles from "/styles/Coins.module.css"
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from "recharts";
 
 
-const Trade = () => { 
+const Coins = () => { 
     const onClick = () => {
         <Link href="/menu/trade/ttrade"/>
     }
@@ -75,4 +75,4 @@ const Trade = () => {
     </div>
 )
 }
-export default Trade
+export default Coins

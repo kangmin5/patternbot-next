@@ -3,21 +3,21 @@ import Link from 'next/link';
 import styles from '@/styles/Nav.module.css'
 import Image from 'next/image';
 
-export default function Nav() {
+ const Nav=()=> {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-          <div className={styles.logo} >
-          <Link href='/'>
-            <Image src="/images/patternbot.png" width={120} height={40} alt="LOGO"/></Link>
+        <div>
+          <Link href='/' >
+            <p className={styles.logo}>PatternBOT</p></Link>
           </div>
-          <div className={styles.mainMenu}>
-              <Link href='/coins/'>거래소</Link>
-              <Link href='/orders/order'>투자현황</Link>
-              <Link href='/settings/'>설정</Link>
-              <Link href='/menu/about'>About</Link>
-              <Link href='/menu/contact'>Contact</Link>
-              <Link href='/faqs/'>FAQ</Link>
+          <div className={styles.menus}>
+              <Link className={styles.menu} href='/coins/coins'>거래소</Link>
+              <Link className={styles.menu} href='/orders/orders'>투자현황</Link>
+              <Link className={styles.menu} href='/settings/settings'>설정</Link>
+              <Link className={styles.menu} href='/menus/about'>About</Link>
+              <Link className={styles.menu} href='/menus/contact'>Contact</Link>
+              <Link className={styles.menu} href='/menus/faq'>FAQ</Link>
 
           </div>
         <div className={styles.loginMenu}>
@@ -35,4 +35,4 @@ export default function Nav() {
   )
 }
 
-
+export default Nav;

@@ -8,4 +8,4 @@ import styles from '@/styles/Faq.module.css'
     </div>
   )
 }
-export default Faq
+export default Faq;

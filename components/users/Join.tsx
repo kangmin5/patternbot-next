@@ -23,6 +23,7 @@ const Join: React.FC = () => {
             <h1>회원가입</h1>
           <form onSubmit={e => {
             e.preventDefault();
+            alert(`1. 진행확인: 회원가입클릭 ${JSON.stringify(user)}`)
             dispatch(userActions.joinRequest(user));
             setUser({username: '', password: '', email: '', name: ''})
           }}>
@@ -30,7 +31,6 @@ const Join: React.FC = () => {
                   margin="normal"
                   required
                   fullWidth
-                  id=""
                   label="이름"
                   name="name"
                   autoComplete="name"
@@ -40,7 +40,6 @@ const Join: React.FC = () => {
                   margin="normal"
                   required
                   fullWidth
-                  id=""
                   label="아이디"
                   name="username"
                   autoComplete="username"
@@ -53,7 +52,6 @@ const Join: React.FC = () => {
                   name="password"
                   label="비밀번호"
                   type="password"
-                  id="password"
                   autoComplete="current-password"
                   onChange={onChange}
                 />
