@@ -3,7 +3,7 @@ import { call, delay, put, takeLatest } from 'redux-saga/effects'
 // yarn add @redux-saga/is --dev , yarn add @types/redux, yarn add redux-saga
 import { userActions } from '@/modules/users';
 import { userJoinApi, userLoginApi,userUpdateApi, userDeleteApi, userFindAllApi,
-     userFindAllSortApi, userFindAllPageableApi, userCountApi, userFindByIdApi } from '@/apis/userApi'
+     userFindAllSortApi, userFindAllPageableApi, userCountApi, userFindByIdApi } from '@/modules/apis/userApi'
 
 interface UserJoinType{
     type: string;

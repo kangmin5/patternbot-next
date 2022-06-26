@@ -1,7 +1,7 @@
 import { configureStore, ThunkAction, Action, AnyAction, combineReducers, CombinedState } from '@reduxjs/toolkit'
 import createSagaMiddleware from '@redux-saga/core'
 import usersReducer, { UserState } from '../modules/users'
-import rootSaga from '@/sagas';
+import rootSaga from '@/modules/sagas';
 import { createWrapper, HYDRATE } from 'next-redux-wrapper'
 import logger from 'redux-logger'
 import coinReducer from './coins'
