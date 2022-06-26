@@ -40,7 +40,7 @@ export default function Login() {
             </Button>
             </div>
             <div>
-            <Link href='/users/register' >
+            <Link href='/users/join' >
                 <h5 style={{ marginTop: "0.5rem",textAlign:"end",color:"#5e5ee6",cursor:"pointer" }}>
 						회원가입
             </h5>

@@ -8,9 +8,7 @@ export interface UserState {
     status: 'idle' | 'loading' | 'succeeded' |'failed'
 }
 const initialState: UserState = {
-    data: [
-        { username: 'mk', password: '1111', email: 'mk@kangmin.kr', name: 'kangmin' }
-    ],
+    data: [],
     status: 'idle'
 }
 

@@ -22,10 +22,10 @@ export const userJoinApi = async (
         email: string,
        }) => {
         try{
-            alert(` 4 API 시도`)   
+            alert(` 4 API 서버에 /users/join시도`)   
             const response: AxiosResponse<unknown, UserType[]> =
                 await axios.post(`${SERVER}/users/join`, payload, { headers })
-            alert(`진행5 : 응답 성공 + ${JSON.stringify(response.data)}`)
+            alert(`진행5 : API 서버로 데이타 보냄 성공 + ${JSON.stringify(response.data)}`)
             return response.data
         }catch(err){
             return err;

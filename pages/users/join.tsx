@@ -1,8 +1,6 @@
 import Join from '@/components/users/Join'
 import React from 'react'
 
-
-
 const JoinPage=()=> {
   return (
     <div>
