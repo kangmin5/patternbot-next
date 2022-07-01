@@ -1,36 +1,36 @@
 import { PayloadAction } from '@reduxjs/toolkit'
 import { call, delay, put, takeLatest } from 'redux-saga/effects'
 // yarn add @redux-saga/is --dev , yarn add @types/redux, yarn add redux-saga
-import { userActions } from '@/modules/users';
+import { userActions } from '@/modules/users/userSlice';
 import { userJoinApi, userLoginApi,userUpdateApi, userDeleteApi, userFindAllApi,
      userFindAllSortApi, userFindAllPageableApi, userCountApi, userFindByIdApi } from '@/modules/apis/userApi'
 
 interface UserJoinType{
     type: string;
     payload: {
-        username:string, password:string, email:string, 
-        name:string
+        name:string,username:string, password:string, email:string, 
+        
     }
 }
 interface UserJoinSuccessType{
     type: string;
     payload: {
-        username:string, password:string, email:string, 
-        name:string
+        name:string, username:string, password:string, email:string, 
+        
     }
 }
 
 interface UserLoginType{
     type: string;
     payload: {
-        userid:string, password:string
+        email:string, password:string
     }
 }
 interface UserLoginSuccessType{
     type: string;
     payload: {
-        userid:string,  email:string, 
-        name:string, phone:string, birth:string, address:string
+        email:string, password:string,
+        /* username:string, name:string, phone:string, birth:string, address:string */
     }
 }
 function* join(user: UserJoinType){

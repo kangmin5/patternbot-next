@@ -33,7 +33,7 @@ export const userJoinApi = async (
 }
 
 export const userLoginApi = async (
-    payload: {userid:string, password:string}) => {
+    payload: {email:string, password:string}) => {
         try{
             const response : AxiosResponse<unknown, UserType[]>=
             await axios.post(`${SERVER}/users/login`, payload, { headers })
@@ -44,6 +44,8 @@ export const userLoginApi = async (
             return err;
         }
 }
+
+
 
 export const userUpdateApi = async (
         payload: {userid:string, password:string}) => {

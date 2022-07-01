@@ -41,7 +41,10 @@ export const userSlice = createSlice({
         loginFailure(state: UserState, {payload}){
             state.status = 'failed'
             state.data = payload
-        }
+        },
+        // logout(state) {
+        //     state.isAuthenticated = false
+        // }
     }
 })
 export const { joinRequest, joinSuccess, joinFailure,

@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
+import React, {  useState } from 'react'
 import styles from '@/styles/Join.module.css'
 import Link from 'next/link'
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-import {  User, userActions } from '@/modules/users'
+import {  User, userActions } from '@/modules/users/userSlice'
 import { useDispatch } from 'react-redux';
 
-const Join: React.FC = () => {
+const Join = () => {
   const dispatch = useDispatch();
   
   const [user, setUser] = useState<User>({

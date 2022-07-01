@@ -1,11 +1,13 @@
 import React from 'react'
 import Login from '@/components/users/Login'
+import { NextPage } from 'next'
 
   
-export default function LoginPage() {
+ const LoginPage:NextPage=()=> {
   return (
     <div>
       <Login/>
     </div>
   )
 }
+export default LoginPage

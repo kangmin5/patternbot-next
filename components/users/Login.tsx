@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from '@/styles/Login.module.css'
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Link from 'next/link';
 
-export default function Login() {
+const Login= () => {
+   const [user, setUser] = useState('')
+  const [isLogined,setIsLogined] = useState(false)
+
   return (
     <div className={styles.container}>
             <h1 > 로그인</h1>
@@ -15,9 +18,9 @@ export default function Login() {
               fullWidth
               id=""
               label="이메일"
-              name="userid"
-              autoComplete="userid"
-            />
+              name="email"
+              autoComplete="email"
+            /> 
             <TextField
               margin="normal"
               required
@@ -45,15 +48,7 @@ export default function Login() {
 						회원가입
             </h5>
             </Link>
-            <Link href="/users/googleLogin">
-                <Button 
-                  fullWidth
-                  variant="contained"
-                  sx={{ mt: 0.5, mb: 0 }}
-                  >
-                  Google 로그인                  
-                </Button>
-            </Link>
+ 
             </div>
             <div>
                 <h5>계속 진행하면 patternBot의 서비스 약관 및 개인정보 보호정책에 동의한 것으로 간주됩니다.</h5>
@@ -63,3 +58,4 @@ export default function Login() {
     </div>
   )
 }
+export default Login;
